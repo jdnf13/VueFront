@@ -42,12 +42,12 @@ defineProps<{
   color: #8BACD9;
   border-radius: 16px;
   padding: 24px;
-  width: 327px;
+  width: 250rem;
   font-size: 1.5rem;
   box-shadow: 0 25px 50px 0 rgba(0,0,0,0.1);
   @media screen and (min-width: 768px) {
     font-size: 1rem;
-    width: 350px;
+    width: 20rem;
     padding-bottom: 32px;
   }
   .card__product-img {
