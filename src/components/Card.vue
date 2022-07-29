@@ -37,6 +37,7 @@ defineProps<{
 
 <style scoped lang="scss">
 .card {
+  display: inline-block;
   margin-bottom: 5%;
   background-color: #15263F;
   color: #8BACD9;
