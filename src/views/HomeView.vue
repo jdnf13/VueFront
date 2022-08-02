@@ -1,15 +1,3 @@
-<template>
-  <div id="HomeView">
-    <h1 class="title">Tienda</h1>
-    <div >
-    <Card v-for="result of results" v-bind:key="result._id" 
-      v-bind:description="result.producto"
-      v-bind:product="result.codigo"
-      v-bind:price="result.valor"
-    />
-    </div>
-  </div>
-</template>
 
 <script setups>  
 import axios from 'axios';
@@ -33,6 +21,7 @@ export default {
         let result = axios.get("http://localhost:3003/productos-get")
           .then((res) => {
             this.results = res.data.data;
+            console.log('consulta data',this.results)
           })
           .catch((err) => {
             console.log(err);
@@ -41,3 +30,21 @@ export default {
     },
   }
 </script>
+
+<template>
+  <div id="HomeView">
+    <h1 class="title"><a v-on:click="fetch" >Tienda</a></h1>
+    <div class="container"  >
+      <div class="columns is-desktop is-mobile is-tablet is-multiline is-centered" >
+        <div class="column is-12-mobile is-4-desktop is-4-tablet" v-for="result of results" v-bind:key="result._id" >
+          <Card 
+            v-bind:description="result.producto"
+            v-bind:product="result.codigo"
+            v-bind:price="result.valor"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
