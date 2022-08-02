@@ -1,36 +1,43 @@
-<script setup lang="ts">
-import Card from '@/components/Card.vue';
-</script>
-
 <template>
-  <main>
-    <header>
-      <div class="container">
-        <h2 class="item">Tienda</h2>
-      </div>
-    </header>
-
-      <Card class="cards" description="Descripcion del primer producto agregado" 
-          product="Producto 1"
-          price="21.000" />
-      <Card description="Descripcion del segundo producto agregado" 
-          product="Producto 2"
-          price="32.000" />
-
-  </main>
+  <div id="HomeView">
+    <h1 class="title">Tienda</h1>
+    <div >
+    <Card v-for="result of results" v-bind:key="result._id" 
+      v-bind:description="result.producto"
+      v-bind:product="result.codigo"
+      v-bind:price="result.valor"
+    />
+    </div>
+  </div>
 </template>
 
-<style scoped>
-  .container {
-    align-items: stretch;
+<script setups>  
+import axios from 'axios';
+import Card from '@/components/Card.vue'; //importamos componente de Card
+
+export default {
+    components: { //aqui exportamos el componente Card que se importo anteriormente para poder utilizarlo en el DOM
+      Card
+    },
+    name:"HomeView", //nombre de la funcion que estamos exportando
+    data: function () { //en la propiedad data se almacenaran todos los datos de la funcion
+      return {
+        results: []//dentro de un array que llamamos result
+      }
+    },
+    created () { //el parametro created() nos permite ejecutar el metodo fetch una vez el componente sea montado
+      this.fetch()
+    },
+    methods:{ //en la propiedad methods declaramos todos los metodos que utilizara nuestro componente
+      fetch() { // metodo fetch para consulta los datos
+        let result = axios.get("http://localhost:3003/productos-get")
+          .then((res) => {
+            this.results = res.data.data;
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      }
+    },
   }
-  .item {
-    text-align: center;
-    padding-right: 5rem;
-    padding-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  .cards{
-    display: inline-block;
-  }
-</style>
+</script>

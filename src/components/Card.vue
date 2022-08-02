@@ -2,7 +2,7 @@
 defineProps<{
   description: string,
   product:string,
-  price:string
+  price:Number
 }>()
 </script>
 
