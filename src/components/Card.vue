@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
     <div class="card">
-      <div class="card-header"><img src="@/img/product.png" alt=description/></div>
+      <div class="card-header"><img src="@/assets/Café Zen-02.png" alt=description/></div>
       <div class="card-content">
         <h3 class="title is-size-4">{{description}}</h3>
         <h2 class="subtitle">{{product}}</h2>

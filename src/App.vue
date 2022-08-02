@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
   <header>
-    <img alt="Aqui Va el logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Aqui Va el logo" class="logo" src="@/assets/Café Zen-02.png" width="125" height="125" />
 
     <div class="wrapper">
       <nav>
