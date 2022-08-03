@@ -8,12 +8,12 @@ defineProps<{
 
 <template>
     <div class="card">
-      <div class="card-header"><img src="@/assets/Café Zen-02.png" alt=description/></div>
+      <div class="card-header"><img src="" alt=description/></div>
       <div class="card-content">
         <h3 class="title is-size-4">{{description}}</h3>
         <h2 class="subtitle">{{product}}</h2>
         <h2 class="subtitle-price">${{price}}</h2>
-        <button class="button is-success is-rounded">Ver mas</button>
+        <button class="button primary">Ver mas</button>
       </div>
     </div>
 </template>
@@ -58,10 +58,17 @@ defineProps<{
   width: 250rem;
   font-size: 1.5rem;
   box-shadow: 0 25px 50px 0 rgba(0,0,0,0.1);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 750px) {
     font-size: 1rem;
     width: 20rem;
     padding-bottom: 32px;
+    margin-left: -32px;
+  }
+  @media screen and (max-width: 765px) {
+    font-size: 1rem;
+    width: 15rem;
+    padding-bottom: 32px;
+    margin-left: 0px;
   }
   .card__product-img {
     cursor: pointer;

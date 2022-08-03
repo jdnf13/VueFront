@@ -32,11 +32,11 @@ export default {
 </script>
 
 <template>
-  <div id="HomeView">
+  <div id="HomeView" class="grid">
     <h1 class="title"><a v-on:click="fetch" >Tienda</a></h1>
-    <div class="container"  >
-      <div class="columns is-desktop is-mobile is-tablet is-multiline is-centered" >
-        <div class="column is-12-mobile is-4-desktop is-4-tablet" v-for="result of results" v-bind:key="result._id" >
+    <div class="container" >
+      <div class="row" >
+        <div class="col-5" v-for="result of results" v-bind:key="result._id" >
           <Card 
             v-bind:description="result.producto"
             v-bind:product="result.codigo"
@@ -48,3 +48,25 @@ export default {
   </div>
 </template>
 
+<style>
+  
+  .col-5 {
+    margin-right: 8%;
+  }
+  @media screen and (min-width: 1024px) {
+    .grid{
+      position: center;
+      display: inline-block;
+      align-items: baseline;
+      margin-left: -10rem;
+      margin-right: -5rem
+
+    }    
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .grid{
+      margin-left: 0rem
+    }
+     }
+</style>
