@@ -8,18 +8,22 @@ defineProps<{
 
 <template>
     <div class="card">
-      <div class="card-header"><img src="" alt=description/></div>
+      <div class="card-header"><img class="card__product-img" src="@/assets/Café Zen-02.png" alt=description/></div>
       <div class="card-content">
         <h3 class="title is-size-4">{{description}}</h3>
         <h2 class="subtitle">{{product}}</h2>
         <h2 class="subtitle-price">${{price}}</h2>
-        <button class="button primary">Ver mas</button>
+        <button class="button" variant="info">Ver mas</button>
       </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 
+.button{
+  cursor: pointer;
+  background-color: #acfac200;
+}
 .subtitle-price{
   color: #ffffff;
 }
@@ -73,6 +77,8 @@ defineProps<{
   .card__product-img {
     cursor: pointer;
     position: center;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
