@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
   <header>
-    <img alt="Aqui Va el logo" class="logo" src="@/assets/Café Zen-02.png" width="125" height="125" />
+    <img alt="Aqui Va el logo" class="logo" src="@/assets/Café Zen-02.png" />
 
     <div class="wrapper">
       <nav>
@@ -17,10 +17,11 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
+<style >
 header {
   line-height: 1.5;
   max-height: 100vh;
+  max-width: 100%;
 }
 
 .container {
@@ -28,6 +29,8 @@ header {
 }
 
 .logo {
+  max-width: 25%;
+  max-height: 25%;
   display: block;
   margin: 0 auto 2rem;
 }
