@@ -81,19 +81,50 @@ defineProps<{
   padding: 24px;
   font-size: 1.5rem;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  @media  screen and  (min-width: 400px) {
+    font-size: 1rem;
+    width: 10rem;
+    height: 23rem;
+    padding-bottom: 32px;
+    margin-left: -32px;    
+  }
+  @media  screen and  (min-width: 540px) {
+    font-size: 1rem;
+    width: 10rem;
+    height: 23rem;
+    padding-bottom: 32px;
+    margin-left: -32px;    
+  };
   @media screen and (min-width: 750px) {
     font-size: 1rem;
     width: 20rem;
     height: 33rem;
     padding-bottom: 32px;
     margin-left: -32px;
-  }
+  };
   @media screen and (max-width: 765px) {
     font-size: 1rem;
     width: 15rem;
     height: 37rem;
     padding-bottom: 32px;
     margin-left: 0px;
+  };
+  @media screen and (max-width: 1000px) {
+    font-size: 1rem;
+    width: 19rem;
+    height: 37rem;
+    padding-bottom: 32px;
+    margin-left: 0px;
+  };
+  @media  (min-width: 1025px) {
+    width: 18rem;
+  };
+
+  @media screen and  (min-width: 400px){
+        .card__product-img{
+          max-width: 25%;
+          max-height: 25%;
+        }
   }
   .card__product-img {
     cursor: pointer;

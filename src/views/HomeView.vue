@@ -36,7 +36,7 @@ export default {
     <div class="containerTitle"><h1 class="title1"><a v-on:click="fetch" >Tienda</a></h1></div>  
     <div class="container" >
       <div class="row" >
-        <div class="col-5" v-for="result of results" v-bind:key="result._id" >
+        <div class="col-8 col-sm-4" v-for="result of results" v-bind:key="result._id" >
           <Card 
             v-bind:description="result.producto"
             v-bind:product="result.codigo"
@@ -59,21 +59,95 @@ export default {
   .col-5 {
     margin-right: 8%;
   }
-  @media screen and (min-width: 1024px) {
+
+  @media  (min-width: 700px) {
     .grid{
       position: center;
       display: inline-block;
       align-items: baseline;
-      margin-left: -10rem;
-      margin-right: -5rem
+      margin-left: 3rem;
+      margin-right: -10rem;
+      margin-top: 4rem;
+
+    }    
+  }
+
+  @media  (min-width: 400px) {
+    .grid{
+      margin-top: 6rem;
+      margin-left: 2rem;
+      margin-right: 0rem;
+    }    
+  }
+
+  @media  (min-width: 540px) {
+    .grid{
+      position: center;
+      display: inline-block;
+      align-items: baseline;
+      margin-left: 5rem;
+      margin-right: 3rem;
+      margin-top: 6rem;
+
+    }    
+  }
+
+  @media  (min-width: 950px) {
+    .grid{
+      position: center;
+      display: inline-block;
+      align-items: baseline;
+      margin-left: 2rem;
+      margin-right: -8rem;
+      margin-top: 6rem;
+
+    }    
+  }
+
+    @media  (min-width: 990px) {
+    .grid{
+      position: center;
+      display: inline-block;
+      align-items: baseline;
+      margin-left: -2rem;
+      margin-right: -10em;
+      margin-top: 4rem;
+
+    }    
+  }
+
+    @media  (min-width: 1025px) {
+    .grid{
+      position: center;
+      display: inline-block;
+      align-items: baseline;
+      margin-left: 2rem;
+      margin-right: -34rem;
+      margin-top:01rem;
+
+    }    
+  }
+
+  @media  (min-width: 1100px) {
+    .grid{
+      position: center;
+      display: inline-block;
+      align-items: baseline;
+      margin-left: -1rem;
+      margin-right: -35rem;
+      margin-top: 12rem
 
     }    
   }
   
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .grid{
-      margin-left: 0rem
-    }
+      position: center;
+      display: inline-block;
+      align-items: baseline;
+      margin-left: 22rem;
+      margin-right: -45rem;
+      margin-top: 2rem    }
   }
 
 
