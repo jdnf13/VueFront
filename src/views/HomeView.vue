@@ -33,7 +33,7 @@ export default {
 
 <template>
   <div id="HomeView" class="grid">
-    <h1 class="title"><a v-on:click="fetch" >Tienda</a></h1>
+    <div class="containerTitle"><h1 class="title1"><a v-on:click="fetch" >Tienda</a></h1></div>  
     <div class="container" >
       <div class="row" >
         <div class="col-5" v-for="result of results" v-bind:key="result._id" >
@@ -49,7 +49,13 @@ export default {
 </template>
 
 <style>
-  
+  .containerTitle{
+    max-width: 100%;
+    margin: auto;
+  }
+  .title1{
+    margin-left: 34%;
+  }
   .col-5 {
     margin-right: 8%;
   }
@@ -68,5 +74,7 @@ export default {
     .grid{
       margin-left: 0rem
     }
-     }
+  }
+
+
 </style>

@@ -2,16 +2,16 @@
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
-  <header>
-    <img alt="Aqui Va el logo" class="logo" src="@/assets/Café Zen-02.png" />
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/shop">Tienda</RouterLink>
-        <RouterLink to="/about">Nosotros</RouterLink>
-      </nav>
-    </div>
-  </header>
+    <header>
+      <img alt="Aqui Va el logo" class="logo" src="@/assets/Café Zen-02.png" />
+  
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/shop">Tienda</RouterLink>
+          <RouterLink to="/about">Nosotros</RouterLink>
+        </nav>
+      </div>
+    </header>
   <div class="container">
     <RouterView />
   </div>
