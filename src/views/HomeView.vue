@@ -75,7 +75,7 @@ export default {
   @media  (min-width: 400px) {
     .grid{
       margin-top: 6rem;
-      margin-left: 2rem;
+      margin-left: 0rem;
       margin-right: 0rem;
     }    
   }
