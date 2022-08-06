@@ -31,8 +31,9 @@ export default {
   }
 </script>
 
-<template>
+<template>      
   <div id="HomeView" class="grid">
+    <hr/>
     <div class="containerTitle"><h1 class="title1"><a v-on:click="fetch" >Tienda</a></h1></div>  
     <div class="container" >
       <div class="row" >

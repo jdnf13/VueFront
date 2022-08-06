@@ -75,12 +75,13 @@ defineProps<{
 .card {
   display: inline-block;
   margin-bottom: 5%;
-  background-color: #e0e0e0;
+  background-color: rgba(98, 97, 106, 0.09);  
+  backdrop-filter: blur(1px);
   color: #8BACD9;
   border-radius: 16px;
   padding: 24px;
   font-size: 1.5rem;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px 0 rgba(98, 97, 106,3);
   @media  screen and  (min-width: 400px) {
     font-size: 1rem;
     width: 10rem;

@@ -4,7 +4,7 @@
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
 
-  --vt-c-black: #fbfbfb;
+  --vt-c-black: rgba(235, 235, 235, 0.09);
   --vt-c-black-soft: #ffffff;
   --vt-c-black-mute: #ffffff;
 
